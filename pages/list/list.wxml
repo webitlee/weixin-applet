@@ -1,0 +1,21 @@
+<scroll-view class="h100p" scroll-y="{{true}}" scroll-with-animation="{{true}}" enable-back-to-top="{{true}}" bindscroll="onscroll" scroll-top="{{scrollTop}}">
+  <block wx:for="{{lists}}">
+    <view class="h260 w100p bs-bb bd-top-e6 pd-20 ts-0" data-isauth="{{item.auth}}" data-id="{{item.id}}" bindtap="detailPage">
+      <view class="w225 h225 inline-block bg-light-gray">
+        <image class="w225 h225" src="{{item.picture}}" mode="aspectFit"></image>
+      </view>
+      <view class="w485 h225 inline-block bs-bb pl-20 v-top pos-rel">
+        <view class="w100p h60 lh-60 t-ellipsis ts-32 tc-333">{{item.title}}</view>
+        <view class="w100p h50 lh-50 mt-20 t-ellipsis ts-24 tc-666">{{item.artist}}</view>
+        <view class="w100p h50 lh-50 t-ellipsis ts-24 tc-666">来源：{{item.source}}</view>
+        <view class="w100p h30 lh-30 bs-bb mt-10 pl-40 bg-eye t-ellipsis ts-22 tc-999">浏览{{item.viewCount}}次</view>
+        <view wx:if="{{item.auth}}">
+          <image class="w60 h30 pos-ab right-0 bottom-0" src="http://ui.yidaochn.com/weixin/miniapps/authentication.png" mode="aspectFit"></image>
+        </view>>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+<view wx:if="{{showReturnTop}}">
+  <include src="/pages/template/returntop.wxml" />
+</view>

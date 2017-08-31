@@ -1,0 +1,300 @@
+/* pages/detail/detail.wxss */
+
+.inline-block{
+  display:inline-block;
+}
+.table-cell{
+  display:table-cell;
+}
+.w30{
+  width:30rpx;
+}
+.w40{
+  width:40rpx;
+}
+.w50{
+  width:50rpx;
+}
+.w120{
+  width:120rpx;
+}
+.w140{
+  width:140rpx;
+}
+.w160{
+  width:160rpx;
+}
+.w200{
+  width:200rpx;
+}
+.w210{
+  width:210rpx;
+}
+.w230{
+  width:230rpx;
+}
+.w530{
+  width:530rpx;
+}
+.w570{
+  width:570rpx;
+}
+.w750{
+  width:750rpx;
+}
+.w100p{
+  width:100%;
+}
+.h10{
+  height:10rpx;
+}
+.h40{
+  height:40rpx;
+}
+.h50{
+  height:50rpx;
+}
+.h60{
+  height:60rpx;
+}
+.h65{
+  height:65rpx;
+}
+.h80{
+  height:80rpx;
+}
+.h120{
+  height:120rpx;
+}
+.h150{
+  height:150rpx;
+}
+.h200{
+  height:200rpx;
+}
+.h210{
+  height:210rpx;
+}
+.h330{
+  height:330rpx;
+}
+.h750{
+  height:750rpx;
+}
+.h100p{
+  height:100%;
+}
+.lh-40{
+  line-height:40rpx;
+}
+.lh-50{
+  line-height:50rpx;
+}
+.lh-60{
+  line-height:60rpx;
+}
+.lh-80{
+  line-height:80rpx;
+}
+.lh-200{
+  line-height:200rpx;
+}
+.pd-20{
+  padding:20rpx;
+}
+.pl-10{
+  padding-left:10rpx;
+}
+.pl-30{
+  padding-left:30rpx;
+}
+.pl-50{
+  padding-left:50rpx;
+}
+.pl-56{
+  padding-left:56rpx;
+}
+.pr-10{
+  padding-right:10rpx;
+}
+.pr-30{
+  padding-right:30rpx;
+}
+.pt-20{
+  padding-top:20rpx;
+}
+.pt-40{
+  padding-top:40rpx;
+}
+.pb-10{
+  padding-bottom:10rpx;
+}
+.pb-20{
+  padding-bottom:20rpx;
+}
+.pb-30{
+  padding-bottom:30rpx;
+}
+.ml-n20{
+  margin-left:-20rpx;
+}
+.ml-20{
+  margin-left:20rpx;
+}
+.ml-30{
+  margin-left:30rpx;
+}
+.mr-n20{
+  margin-right:-20rpx;
+}
+.mr-30{
+  margin-right:30rpx;
+}
+.mb-20{
+  margin-bottom:20rpx;
+}
+.bd-ef{
+  border : 2rpx solid #efefef;
+}
+.bd-top-e6{
+  border-top:2rpx solid #e6e6e6;
+}
+.bd-bottom-e6{
+  border-bottom:2rpx solid #e6e6e6;
+}
+.bd-radius-5{
+  border-radius:5rpx;
+}
+.bd-radius-60{
+  border-radius:60rpx;
+}
+.bg-black{
+  background-color:#000;
+}
+.bg-light-gray{
+  background-color:#f6f9fb;
+}
+.bg-point1{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/point1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:40rpx 65rpx;
+}
+.bg-point2{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/point2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:40rpx 65rpx;
+}
+.bg-point3{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/point3.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:40rpx 65rpx;
+}
+.bg-point4{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/point4.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:30rpx 30rpx;
+}
+.bg-spread{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/spread.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size : 20rpx 20rpx;
+}
+.bg-fold{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/fold.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size : 20rpx 20rpx;
+}
+.bg-download{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/upload-certificate.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size : 18rpx 15rpx;
+}
+.bg-mark{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/mark-orange.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:14rpx 16rpx;
+}
+.bs-bb{
+  box-sizing: border-box;
+}
+.pos-rel{
+  position:relative;
+}
+.pos-ab{
+  position:absolute;
+}
+.top-0{
+  top:0;
+}
+.left-0{
+  left:0;
+}
+.bottom-0{
+  bottom:0;
+}
+.right-30{
+  right:30rpx;
+}
+.v-top{
+  vertical-align: top;
+}
+.v-middle{
+  vertical-align: middle;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.pull-right{
+  float:right;
+}
+.ts-0{
+  font-size:0;
+}
+.ts-20{
+  font-size:20rpx;
+}
+.ts-22{
+  font-size:22rpx;
+}
+.ts-24{
+  font-size:24rpx;
+}
+.ts-28{
+  font-size:28rpx;
+}
+.tc-333{
+  color:#333;
+}
+.tc-666{
+  color:#666;
+}
+.tc-999{
+  color:#999;
+}
+.hidden-surplus{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.of-hidden{
+  overflow: hidden;
+}
+.t-ellipsis{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

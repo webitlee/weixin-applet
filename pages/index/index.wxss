@@ -1,0 +1,210 @@
+/**index.wxss**/
+page{
+  height:100%;
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/bg-mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding-top:195rpx;
+  position:relative;
+}
+.bs-bb{
+  box-sizing: border-box;
+}
+.inline-block{
+  display:inline-block !important;
+}
+.w80{
+  width:80rpx;
+}
+.w90{
+  width:90rpx;
+}
+.w490{
+  width:490rpx;
+}
+.w530{
+  width:530rpx;
+}
+.w50p{
+  width:50%;
+}
+.w100p{
+  width:100%;
+}
+.max-w530{
+  max-width:530rpx;
+}
+.h4{
+  height:4rpx;
+}
+.h45{
+  height:45rpx;
+}
+.h85{
+  height:85rpx;
+}
+.h670{
+  height:670rpx;
+}
+.h100p{
+  height:100%;
+}
+.max-h670{
+  max-height:670rpx;
+}
+.pl-20{
+  padding-left:20rpx;
+}
+.pl-45{
+  padding-left:45rpx;
+}
+.pl-70{
+  padding-left:70rpx;
+}
+.pt-40{
+  padding-top:40rpx;
+}
+.pr-45{
+  padding-right:45rpx;
+}
+.pr-70{
+  padding-right:70rpx;
+}
+.pb-20{
+  padding-bottom:20rpx;
+}
+.pb-30{
+  padding-bottom:30rpx;
+}
+.mt-85{
+  margin-top:85rpx;
+}
+.ml-45{
+  margin-left:45rpx;
+}
+.mr-10{
+  margin-right:10rpx;
+}
+.mr-45{
+  margin-right:45rpx;
+}
+.bd-radius-10{
+  border-radius:10rpx;
+}
+.bd-radius-tr-10{
+  border-top-right-radius: 10rpx;
+}
+.bd-radius-br-10{
+  border-bottom-right-radius: 10rpx;
+}
+.bd-ccc{
+  border:2rpx solid #ccc;
+}
+.op-0{
+  opacity:0;
+}
+.bg-orange{
+  background-color:#f60;
+}
+.bg-transparent{
+  background-color:transparent;
+}
+.bg-black-op50{
+  background-color:rgba(0, 0, 0, 0.5);
+}
+.bg-title{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/title.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:290rpx 45rpx;
+}
+.bg-camera{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/camera.jpg);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:36rpx 36rpx;
+}
+.bg-search{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/search.png);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:32rpx 32rpx;
+}
+.bg-scan{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/photo-scan.jpg);
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:100% 100%;
+}
+.pos-rel{
+  position:relative;
+}
+.pos-ab{
+  position:absolute;
+}
+.pos-fixed{
+  position:fixed;
+}
+.top-0{
+  top:0;
+}
+.top-180{
+  top:180rpx;
+}
+.bottom-0{
+  bottom:0;
+}
+.left-0{
+  left:0;
+}
+.left-110{
+  left:110rpx;
+}
+.right-0{
+  right:0;
+}
+.right-80{
+  right:80rpx;
+}
+.z-999{
+  z-index: 999;
+}
+.ts-0{
+  font-size:0;
+}
+.ts-20{
+  font-family:"Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei", "\5B8B\4F53";
+  font-size:20rpx;
+}
+.ts-22{
+  font-family:"Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei", "\5B8B\4F53";
+  font-size:22rpx;
+}
+.ts-26{
+  font-family:"Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei", "\5B8B\4F53";
+  font-size:26rpx;
+}
+.tc-ccc{
+  color:#ccc;
+}
+.tc-bbb{
+  color:#bbb;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.verticalcenter{
+position: relative; 
+top: 50%;
+left: 50%; /*上下移动屏幕的50%*/
+margin-left: auto;
+margin-right:auto;
+-webkit-transform: translate(-50%,-50%); /*减去自身的50%（多移动的）*/
+-ms-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+}
+

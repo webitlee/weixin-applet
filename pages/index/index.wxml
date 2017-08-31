@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="h45 bg-title"></view>
+<view class="mt-85 ml-45 mr-45 h85 bd-ccc bd-radius-10 pos-rel ts-0">
+  <input id="ipt" class="bs-bb pos-ab top-0 left-0 w490 h100p ts-26 pl-20" placeholder="输入作品名称、艺术家姓名或作品编号" value="{{keyword}}" confirm-type="search" bindconfirm="searching" bindinput="setKeyword"/>
+   <view class="w80 h85 pos-ab top-0 right-0 bg-orange bd-radius-tr-10 bd-radius-br-10 bg-search z-999" catchtap="searching"></view> 
+  <view class="w90 h85 pos-ab top-0 right-80 bg-camera bd-radius-tr-10 bd-radius-br-10 z-999" catchtap="pictureScan"></view>
+</view>
+<view class="pt-40 ts-0 tc-ccc">
+  <view class="w50p bs-bb inline-block pr-70 ts-22 text-right">
+   <view class="inline-block mr-10">○</view>
+   {{artist}} 名艺术家
+  </view>
+  <view class="w50p bs-bb inline-block pl-70 ts-22">
+    <view class="inline-block mr-10">○</view>
+    {{production}} 幅作品
+  </view>
+</view>
+<view class="pos-fixed bottom-0 left-0 pb-20 tc-ccc w100p">
+  <view class="text-center ts-22 tc-bbb pb-30">专业的第三方书画溯源平台</view>
+  <view class="ts-20 text-center">Copyright © 2016 找书画 版权所有</view>
+</view>
+<!--图搜图-->
+<view wx:if="{{pictureScan}}">
+  <view class="w100p h100p pos-ab top-0 left-0 bg-black-op50 bg-scan z-999 op-0" animation="{{animationBg}}">
+    <view class="w530 h670 pos-ab top-180 left-110 bg-transparent">
+      <image src="{{ pictureScanUrl}}" mode="aspectFit" class="w530 h670 max-w530 max-h670 verticalcenter"></image>
+      <image src="http://ui.yidaochn.com/weixin/miniapps/photo-scan-line.png" animation="{{animationFg}}" class="pos-ab top-0 left-0 w530 h4"></image>
+    </view>
+  </view>
+</view>
+

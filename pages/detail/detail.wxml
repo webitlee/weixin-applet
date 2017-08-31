@@ -1,0 +1,356 @@
+<view class="w750 h750 pd-20 bg-black bs-bb pos-rel" data-src="[\"http://res.yidaochn.com/{{responseData.picture}}\"]" catchtap="previewImage">
+  <block wx:if="{{isAuth}}">
+      <view wx:if="{{isShow1}}">
+        <view class="pos-ab w40 h65 bg-point1"style="top:{{top1}};left:{{left1}};"></view>
+      </view>
+      <view wx:if="{{isShow2}}">
+        <view class="pos-ab w40 h65 bg-point2" style="top:{{top2}};left:{{left2}}"></view>
+      </view>
+      <view wx:if="{{isShow3}}">
+        <view class="pos-ab w40 h65 bg-point3" style="top:{{top3}};left:{{left3}}"></view>
+      </view>
+  </block>
+  <image id="photo" class="w100p h100p" src="http://res.yidaochn.com/{{responseData.picture}}@0e_0o_0l_1000h_1000w_90q.src" mode="aspectFit" bindload="imageSize"></image>
+  
+</view>
+<block wx:if="{{isAuth}}">
+  <view class="pt-40 pl-30 pr-30">
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-28 tc-333">认证编号：</view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.number}}</view>
+    </view>
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-28 tc-333">认证来源：</view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.source}}</view>
+    </view>
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-0 tc-333">
+        <view class="inline-block ts-28">名</view>
+        <view class="inline-block ts-28 pl-56">称：</view>
+      </view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.name}}</view>
+    </view>
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-0 tc-333">
+        <view class="inline-block ts-28">作</view>
+        <view class="inline-block ts-28 pl-56">者：</view>
+      </view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.author}}</view>
+    </view>
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-0 tc-333">
+        <view class="inline-block ts-28">尺</view>
+        <view class="inline-block ts-28 pl-56">寸：</view>
+      </view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.width}} x {{responseData.height}} cm</view>
+    </view>
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-0 tc-333">
+        <view class="inline-block ts-28">材</view>
+        <view class="inline-block ts-28 pl-56">质：</view>
+      </view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.material}}</view>
+    </view>
+    <view class="h50 lh-50 ts-0">
+      <view class="w160 inline-block ts-0 tc-333">
+        <view class="inline-block ts-28">题</view>
+        <view class="inline-block ts-28 pl-56">材：</view>
+      </view>
+      <view class="w530 inline-block ts-28 tc-333">{{responseData.subject}}</view>
+    </view>
+    <view class="ts-0">
+      <view class="w160 h50 lh-50 inline-block ts-0 tc-333">
+        <view class="inline-block ts-28">简</view>
+        <view class="inline-block ts-28 pl-56">介：</view>
+      </view>
+      <block wx:if="{{introductionFold}}">
+        <block wx:if="{{introductionIsFold}}">
+          <view class="w530 inline-block v-top">
+            <text id="production-introduction" class="w100p lh-50 ts-28 tc-333 hidden-surplus" decode="{{true}}" space="nbsp">{{responseData.introduction}}</text>
+          </view>
+          <view id="introduction" class="h50 lh-50 pb-10 bg-spread" data-isfold="{{introductionIsFold}}" catchtap="spreadOrFold"></view>
+        </block>
+        <block wx:else>
+          <view class="w530 inline-block v-top">
+            <text id="production-introduction" class="w100p lh-50 ts-28 tc-333" decode="{{true}}" space="nbsp">{{responseData.introduction}}</text>
+          </view>
+          <view id="introduction" class="h50 lh-50 pb-10 bg-fold" data-isfold="{{introductionIsFold}}" catchtap="spreadOrFold"></view>
+        </block>
+      </block>
+      <block wx:else>
+        <view class="w530 inline-block v-top pb-10">
+          <text id="production-introduction" class="w100p lh-50 ts-28 tc-333" decode="{{true}}" space="nbsp">{{responseData.introduction}}</text>
+        </view>
+      </block>
+    </view>
+    <block wx:if="{{responseData.authentication}}">
+      <view class="bd-top-e6 bg-light-gray ml-n20 mr-n20"></view>
+      <view class="ts-0 pb-30 pt-20">
+        <view class="w160 h50 lh-50 inline-block ts-0 tc-333">
+          <view class="inline-block ts-28">证</view>
+          <view class="inline-block ts-28 pl-56">书：</view>
+        </view>
+        <view class="w530 inline-block ts-28 tc-333 v-top pos-rel">
+          <image class="w230 h330" src="{{responseData.authentication}}" data-src="[\"{{responseData.authentication}}\"]" catchtap="previewImage"></image>
+          <view class="pos-ab bottom-0 right-30 w120 h40 lh-40 ts-0 bd-ef bd-radius-5">
+            <view class="w30 h100p inline-block bg-download"></view>
+            <view class="inline-block v-top ts-20 tc-666" data-src="{{responseData.authentication}}" catchtap="download">下载证书</view>
+          </view>
+        </view>
+      </view> 
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class="pt-20 pb-30 pl-30 pr-30 ts-0">
+    <image class="w120 h120 bg-light-gray bd-radius-60" src="http://res.yidaochn.com/{{responseData.avatar}}@1e_120w_120h_1c_0i_1o_90Q_1x.jpg" mode="aspectFit"></image>
+    <view class="inline-block bs-bb w570 pl-30 v-top">
+      <view class="h50 lh-50 ts-28 tc-333 t-ellipsis">
+        <text>{{responseData.author}}</text>
+        <text class="tc-999 pl-10 pr-10">●</text>
+        <text>{{responseData.name}}</text>
+      </view>
+      <view class="h50 lh-50 ts-24 tc-666 t-ellipsis">
+        来源：{{responseData.source}}
+      </view>
+      <block wx:if="{{responseData.title}}">
+        <view class="h50 lh-50 ts-24 tc-666 t-ellipsis">
+          {{responseData.title}}
+        </view>
+      </block>
+      <view class="h50 lh-50 ts-24 tc-666 t-ellipsis">
+        <text>{{responseData.width}} x {{responseData.height}}</text>
+        <block wx:if="{{responseData.type}}">
+          <text class="tc-999 pl-10 pr-10">●</text>
+          <text>{{responseData.type}}</text>
+        </block>
+        <text class="tc-999 pl-10 pr-10">●</text>
+        <text>{{responseData.material}}</text>
+        <block wx:if="{{responseData.time}}">
+          <text class="tc-999 pl-10 pr-10">●</text>
+          <text>{{responseData.time}}</text>
+        </block>
+      </view>
+      <view class="h50 lh-50 ts-24 tc-666 t-ellipsis">
+        围观量：{{responseData.viewCount}}
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{isAuth == false}}">
+  <block wx:if="{{artistFold}}">
+    <block wx:if="{{artistIsFold}}">
+      <view id="artist-description" class="bd-top-e6 pl-30 pr-30 pt-20 h120 of-hidden">
+        <view wx:if="{{responseData.detailNote}}">
+          <view class="lh-40 ts-28 tc-999">{{responseData.detailNote}}</view>
+        </view>
+        <block wx:if="{{responseData.profile}}">
+          <text class="inline-block w100p lh-40 ts-28 tc-999" decode="{{true}}" space="nbsp">艺术家描述：{{responseData.profile}}</text>
+        </block>
+      </view>
+      <view id="description" class="h50 lh-50 pb-10 bg-spread" data-isfold="{{artistIsFold}}" catchtap="spreadOrFold"></view>
+    </block>
+    <block wx:else>
+      <view id="artist-description" class="bd-top-e6 pl-30 pr-30 pt-20">
+        <view wx:if="{{responseData.detailNote}}">
+          <view class="lh-40 ts-28 tc-999">{{responseData.detailNote}}</view>
+        </view>
+        <block wx:if="{{responseData.profile}}">
+          <text class="inline-block w100p lh-40 ts-28 tc-999" decode="{{true}}" space="nbsp">艺术家描述：{{responseData.profile}}</text>
+        </block>
+      </view>
+      <view id="description" class="h50 lh-50 pb-10 bg-fold" data-isfold="{{artistIsFold}}" catchtap="spreadOrFold"></view>
+    </block>
+  </block>
+  <block wx:else>
+    <view id="artist-description" class="pl-30 pr-30">
+      <view wx:if="{{responseData.detailNote}}">
+        <view class="lh-40 ts-28 tc-999">{{responseData.detailNote}}</view>
+      </view>
+      <block wx:if="{{responseData.profile}}">
+        <text class="inline-block w100p lh-40 ts-28 tc-999" decode="{{true}}" space="nbsp">艺术家描述：{{responseData.profile}}</text>
+      </block>
+    </view>
+  </block>
+</block>
+<block wx:if="{{isAuth}}">
+  <view class="bd-top-e6 bd-bottom-e6 h10 bg-light-gray"></view>
+  <view class="mb-20">
+    <view class="h80 lh-80">
+      <view class="w30 h100p bg-mark inline-block"></view>
+      <view class="inline-block ts-28 tc-333 v-top">认证微观</view>
+    </view>
+    <view class="pl-30 pr-30 bs-bb bg-light-gray ts-0">
+      <view class="w50 inline-block">
+        <view class="h60"></view>
+        <view wx:if="{{isShow1}}">
+          <view class="h200 lh-200 text-center ts-24 tc-999 mb-20">1</view>
+        </view>
+        <view wx:if="{{isShow2}}">
+          <view class="h200 lh-200 text-center ts-24 tc-999 mb-20">2</view>
+        </view>
+        <view wx:if="{{isShow3}}">
+          <view class="h200 lh-200 text-center ts-24 tc-999 mb-20">3</view>
+        </view>
+      </view>
+      <view class="w200 inline-block v-top">
+        <view class="h60 lh-60 ts-24 tc-999 text-center">认证点</view>
+        <block wx:if="{{isShow1}}">
+          <view class="h200 of-hidden pos-rel mb-20">
+            <block wx:if="{{mUrls[0][0]}}">
+              <image class="pos-ab" src="http://res.yidaochn.com/{{responseData.thumb}}" style="width:{{thumbWidth}};height:{{thumbHeight}};left:{{mLeft1}};top:{{mTop1}}"></image>
+            </block>
+            <block wx:else>
+              <image class="pos-ab" src="http://res.yidaochn.com/{{responseData.thumb}}" style="width:{{thumbWidth}};height:{{thumbHeight}};left:{{mLeft1}};top:{{mTop1}}" data-src="[\"http://res.yidaochn.com/res-{{mUrls[0][0]}}\",\"http://res.yidaochn.com/res-{{mUrls[0][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[0][2]}}\"]" catchtap="previewImage"></image>
+            </block>
+            <view class="pos-ab top-0 left-0 w200 h200 bg-point4"></view>
+          </view>
+        </block>
+        <block wx:if="{{isShow2}}">
+          <view class="h200 of-hidden pos-rel mb-20">
+            <block wx:if="{{mUrls[1][0]}}">
+              <image class="pos-ab" src="http://res.yidaochn.com/{{responseData.thumb}}" style="width:{{thumbWidth}};height:{{thumbHeight}};left:{{mLeft2}};top:{{mTop2}}"></image>
+            </block>
+            <block wx:else>
+              <image class="pos-ab" src="http://res.yidaochn.com/{{responseData.thumb}}" style="width:{{thumbWidth}};height:{{thumbHeight}};left:{{mLeft2}};top:{{mTop2}}" data-src="[\"http://res.yidaochn.com/res-{{mUrls[1][0]}}\",\"http://res.yidaochn.com/res-{{mUrls[1][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[1][2]}}\"]" catchtap="previewImage"></image>
+            </block>
+            <view class="pos-ab top-0 left-0 w200 h200 bg-point4"></view>
+          </view>
+        </block>
+        <block wx:if="{{isShow3}}">
+          <view class="h200 of-hidden pos-rel mb-20">
+            <block wx:if="{{mUrls[2][0]}}">
+              <image class="pos-ab" src="http://res.yidaochn.com/{{responseData.thumb}}" style="width:{{thumbWidth}};height:{{thumbHeight}};left:{{mLeft3}};top:{{mTop3}}"></image>
+            </block>
+            <block wx:else>
+              <image class="pos-ab" src="http://res.yidaochn.com/{{responseData.thumb}}" style="width:{{thumbWidth}};height:{{thumbHeight}};left:{{mLeft3}};top:{{mTop3}}" data-src="[\"http://res.yidaochn.com/res-{{mUrls[2][0]}}\",\"http://res.yidaochn.com/res-{{mUrls[2][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[2][2]}}\"]" catchtap="previewImage"></image>
+            </block>
+            <view class="pos-ab top-0 left-0 w200 h200 bg-point4"></view>
+          </view>
+        </block>
+      </view>
+      <view class="w200 ml-20 inline-block v-top">
+        <view class="h60 lh-60 ts-24 tc-999 text-center">低倍</view>
+        <view wx:if="{{isShow1}}">
+          <image class="w200 h200 mb-20" src="http://res.yidaochn.com/res-{{mUrls[0][1]}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/res-{{mUrls[0][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[0][2]}}\",\"http://res.yidaochn.com/res-{{mUrls[0][0]}}\"]" catchtap="previewImage"></image>
+        </view>
+        <view wx:if="{{isShow2}}">
+          <image class="w200 h200 mb-20" src="http://res.yidaochn.com/res-{{mUrls[1][1]}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/res-{{mUrls[1][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[1][2]}}\",\"http://res.yidaochn.com/res-{{mUrls[1][0]}}\"]" catchtap="previewImage"></image>
+        </view>
+        <view wx:if="{{isShow3}}">
+         <image class="w200 h200 mb-20" src="http://res.yidaochn.com/res-{{mUrls[2][1]}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/res-{{mUrls[2][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[2][2]}}\",\"http://res.yidaochn.com/res-{{mUrls[2][0]}}\"]" catchtap="previewImage"></image>
+        </view>
+      </view>
+      <view class="w200 ml-20 inline-block v-top">
+        <view class="h60 lh-60 ts-24 tc-999 text-center">高倍</view>
+        <view wx:if="{{isShow1}}">
+          <image class="w200 h200 mb-20" src="http://res.yidaochn.com/res-{{mUrls[0][2]}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/res-{{mUrls[0][2]}}\",\"http://res.yidaochn.com/res-{{mUrls[0][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[0][0]}}\"]" catchtap="previewImage"></image>
+        </view>
+        <view wx:if="{{isShow2}}">
+          <image class="w200 h200 mb-20" src="http://res.yidaochn.com/res-{{mUrls[1][2]}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/res-{{mUrls[1][2]}}\",\"http://res.yidaochn.com/res-{{mUrls[1][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[1][0]}}\"]" catchtap="previewImage"></image>
+        </view>
+        <view wx:if="{{isShow3}}">
+          <image class="w200 h200 mb-20" src="http://res.yidaochn.com/res-{{mUrls[2][2]}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/res-{{mUrls[2][2]}}\",\"http://res.yidaochn.com/res-{{mUrls[2][1]}}\",\"http://res.yidaochn.com/res-{{mUrls[2][0]}}\"]" catchtap="previewImage"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{otherAuthentication}}">
+  <view class="bd-top-e6 mb-20">
+    <view class="h80 lh-80">
+      <view class="w30 h100p bg-mark inline-block"></view>
+      <view class="inline-block ts-28 tc-333 v-top">其他认证资料</view>
+    </view>
+    <view class="pl-30 pr-30 ts-0">
+      <block wx:if="{{responseData.video}}">
+        <view class="w210 mr-30 inline-block">
+          <video id="video" class="h210 w210" src="http://res.yidaochn.com/{{responseData.video.url}}" controls="{{true}}" poster="http://res.yidaochn.com/{{responseData.video.poster}}@1e_1c_0o_0l_200h_200w_90q.src" bindplay="play" bindfullscreenchange="fullScreen"></video>
+          <text class="w210 h60 inline-block lh-60 text-center ts-24 tc-333">认证视频</text>
+        </view>
+      </block>
+      <block wx:if="{{responseData.photo}}">
+        <view class="w210 mr-30 inline-block v-top">
+          <image class="w210 h210 inline-block bg-lighg-gray" src="http://res.yidaochn.com/{{responseData.photo}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/{{responseData.photo}}@0e_0o_0l_1000h_1000w_90q.src\"]" mode="aspectFit" catchtap="previewImage"></image>
+          <text class="w210 h60 inline-block lh-60 text-center ts-24 tc-333">作品合影</text>
+        </view>
+      </block>
+      <block wx:if="{{responseData.certified}}">
+        <view class="w210 inline-block v-top">
+          <image class="w210 h210 inline-block bg-lighg-gray" src="http://res.yidaochn.com/{{responseData.certified}}@1e_1c_0o_0l_200h_200w_90q.src" data-src="[\"http://res.yidaochn.com/{{responseData.certified}}@0e_0o_0l_1000h_1000w_90q.src\"]" mode="aspectFit" catchtap="previewImage"></image>
+          <text class="w210 h60 inline-block lh-60 text-center ts-24 tc-333">保真证明</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</block>
+<block wx:if="{{isAuth}}">
+  <view class="bd-top-e6 mb-20">
+    <view class="h80 lh-80 pr-30">
+      <view class="w30 h100p bg-mark inline-block"></view>
+      <view class="inline-block ts-28 tc-333 v-top">认证单位</view>
+      <view class="pull-right w140 text-right ts-22 tc-999">{{responseData.authOrg.province}}</view>
+      <view class="pull-right w140 ts-22 tc-999">{{responseData.authOrg.count}}幅</view>
+    </view>
+    <view class="pl-30 pr-30 h120 ts-0">
+      <block wx:if="{{responseData.authOrg.src}}">
+        <image class="w120 h120 bg-light-gray" src="http://res.yidaochn.com/{{responseData.authOrg.src}}@1e_80w_80h_1c_0i_1o_90Q_1x.jpg" mode="aspectFit"></image>
+      </block>
+      <block wx:else>
+        <image class="w120 h120 bg-light-gray" src="http://ui.yidaochn.com/weixin/miniapps/authentication_seal.png" mode="aspectFit"></image>
+      </block>
+      <view class="inline-block w570 v-top">
+        <text class="table-cell h120 v-middle pl-50 ts-28 tc-333">{{responseData.authOrg.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="bd-top-e6 mb-20">
+    <view class="h80 lh-80 pr-30">
+      <view class="w30 h100p bg-mark inline-block"></view>
+      <view class="inline-block ts-28 tc-333 v-top">艺术家</view>
+      <view class="pull-right w140 text-right ts-22 tc-999">{{responseData.artist.province}}</view>
+      <view class="pull-right w140 ts-22 tc-999">{{responseData.artist.count}}幅</view>
+    </view>
+    <view class="pl-30 pr-30 h120 ts-0">
+      <image class="w120 h120 bg-light-gray" src="http://res.yidaochn.com/{{responseData.artist.src}}@1e_80w_80h_1c_0i_1o_90Q_1x.jpg" mode="aspectFit"></image>
+      <view class="inline-block w570 v-top">
+        <text class="table-cell h120 v-middle pl-50 ts-28 tc-333">{{responseData.artist.name}}</text>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{artistFold}}">
+    <block wx:if="{{artistIsFold}}">
+      <view id="artist-description" class="bd-top-e6 pl-30 pr-30 pt-20 h150 of-hidden">
+        <view wx:if="{{responseData.detailNote}}">
+          <view class="lh-50 ts-28 tc-999 pb-20">{{responseData.detailNote}}</view>
+        </view>
+        <block wx:if="{{responseData.profile}}">
+          <text class="inline-block w100p lh-50 ts-28 tc-999" decode="{{true}}" space="nbsp">艺术家描述：{{responseData.profile}}</text>
+        </block>
+      </view>
+      <view id="description" class="h50 lh-50 pb-10 bg-spread" data-isfold="{{artistIsFold}}" catchtap="spreadOrFold"></view>
+    </block>
+    <block wx:else>
+      <view id="artist-description" class="bd-top-e6 pl-30 pr-30 pt-20">
+        <view wx:if="{{responseData.detailNote}}">
+          <view class="lh-50 ts-28 tc-999 pb-20">{{responseData.detailNote}}</view>
+        </view>
+        <block wx:if="{{responseData.profile}}">
+          <text class="inline-block w100p lh-50 ts-28 tc-999" decode="{{true}}" space="nbsp">艺术家描述：{{responseData.profile}}</text>
+        </block>
+      </view>
+      <view id="description" class="h50 lh-50 pb-10 bg-fold" data-isfold="{{artistIsFold}}" catchtap="spreadOrFold"></view>
+    </block>
+  </block>
+  <block wx:else>
+    <view id="artist-description" class="pl-30 pr-30">
+      <view wx:if="{{responseData.detailNote}}">
+        <view class="lh-50 ts-28 tc-999 pb-20">{{responseData.detailNote}}</view>
+      </view>
+      <block wx:if="{{responseData.profile}}">
+        <text class="inline-block w100p lh-50 ts-28 tc-999" decode="{{true}}" space="nbsp">艺术家描述：{{responseData.profile}}</text>
+      </block>
+    </view>
+  </block>
+</block>
+

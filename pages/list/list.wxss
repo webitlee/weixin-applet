@@ -1,0 +1,128 @@
+page{
+  height:100%;
+}
+view{
+  display:inline-block !important;
+}
+inline-block{
+  display:inline-block !important;
+}
+.w60{
+  width:60rpx;
+}
+.w225{
+  width:225rpx;
+}
+.w485{
+  width:485rpx;
+}
+.w100p{
+  width:100%;
+}
+.max-w100p{
+  max-width:100%;
+}
+.h30{
+  height:30rpx;
+}
+.h50{
+  height:50rpx;
+}
+.h60{
+  height:60rpx;
+}
+.h225{
+  height:225rpx;
+}
+.h260{
+  height:260rpx;
+}
+.h100p{
+  height:100%;
+}
+.max-h100p{
+  max-height:100%;
+}
+.lh-30{
+  line-height:30rpx;
+}
+.lh-50{
+  line-height:50rpx;
+}
+.lh-60{
+  line-height:60rpx;
+}
+.pd-20{
+  padding:20rpx;
+}
+.pl-20{
+  padding-left:20rpx;
+}
+.pl-40{
+  padding-left:40rpx;
+}
+.pr-20{
+  padding-right:20rpx;
+}
+.mt-10{
+  margin-top:10rpx;
+}
+.mt-20{
+  margin-top:20rpx;
+}
+.bd-top-e6{
+  border-top:2rpx solid #e6e6e6;
+}
+.bg-light-gray{
+  background-color:#f6f9fb;
+}
+.bg-eye{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/eye.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size:24rpx 16rpx;
+}
+.pos-rel{
+  position:relative;
+}
+.pos-ab{
+  position:absolute;
+}
+.right-0{
+  right:0;
+}
+.bottom-0{
+  bottom:0;
+}
+.bs-bb{
+  box-sizing: border-box;
+}
+.v-top{
+  vertical-align: top;
+}
+.ts-0{
+  font-size:0;
+}
+.ts-22{
+  font-size:22rpx;
+}
+.ts-24{
+  font-size:24rpx;
+}
+.ts-32{
+  font-size:32rpx;
+}
+.tc-333{
+  color:#333;
+}
+.tc-666{
+  color:#666;
+}
+.tc-999{
+  color:#999;
+}
+.t-ellipsis{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

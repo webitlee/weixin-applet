@@ -1,0 +1,30 @@
+page{
+   font-family:"Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei", "\5B8B\4F53";
+}
+view{
+   font-family:"Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei", "\5B8B\4F53";
+}
+.w70{
+  width:70rpx;
+}
+.h70{
+  height:70rpx;
+}
+.bg-totop{
+  background-image:url(http://ui.yidaochn.com/weixin/miniapps/top-click.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:70rpx 70rpx;
+}
+.pos-rel{
+  position:relative;
+}
+.pos-fixed{
+  position: fixed;
+}
+.right-30{
+  right:30rpx;
+}
+.bottom-250{
+  bottom:250rpx;
+}
